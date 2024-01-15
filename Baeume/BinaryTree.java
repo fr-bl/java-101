@@ -1,28 +1,28 @@
 public class BinaryTree<T>{
 	//Referenzen auf Knoten
-	private Node<T> root;
+	private TreeNode<T> root;
 
 	public BinaryTree(){
 		root = null;
 	}
 
-	public Node<T> getRoot(){
+	public TreeNode<T> getRoot(){
 		return root;
 	}
 
 	public void createTestTree(T value1, T value2, T value3, T value4, T value5){
-		root = new Node<T>(value1);
-		Node<T> node1 = new Node<T>(value2);
-		Node<T> node2 = new Node<T>(value3);
-		Node<T> node3 = new Node<T>(value4);
-		Node<T> node4 = new Node<T>(value5);
+		root = new TreeNode<T>(value1);
+		TreeNode<T> node1 = new TreeNode<T>(value2);
+		TreeNode<T> node2 = new TreeNode<T>(value3);
+		TreeNode<T> node3 = new TreeNode<T>(value4);
+		TreeNode<T> node4 = new TreeNode<T>(value5);
 		root.setLeft(node1);
 		root.setRight(node2);
 		node2.setLeft(node3);
 		node2.setRight(node4);
 	}
 
-	public void traversierePreorder(Node<T> root){
+	public void traversierePreorder(TreeNode<T> root){
 		System.out.println(root.getObject());
 		if (root.getLeft() != null) {
 			traversierePreorder(root.getLeft());
@@ -32,7 +32,7 @@ public class BinaryTree<T>{
 		}
 	}
 
-    public void traversiereInorder(Node<T> root){
+    public void traversiereInorder(TreeNode<T> root){
 		if (root.getLeft() != null) {
 			traversierePreorder(root.getLeft());
 		}
@@ -42,7 +42,7 @@ public class BinaryTree<T>{
 		}
     }
 
-    public void traversierePostorder(Node<T> root){
+    public void traversierePostorder(TreeNode<T> root){
 		if (root.getLeft() != null) {
 			traversierePreorder(root.getLeft());
 		}

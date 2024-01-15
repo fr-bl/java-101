@@ -1,9 +1,9 @@
 import java.util.Iterator;
 
-public class Stack<T> implements Iterable<T> {
-	Node<T> head;
+public class IterableStack<T> implements Iterable<T> {
+	IterableNode<T> head;
 
-	public Stack() {
+	public IterableStack() {
 		head = null;
 	}
 
@@ -16,7 +16,7 @@ public class Stack<T> implements Iterable<T> {
 	}
 
 	public void push(T element) {
-		Node<T> newNode = new Node<T>(element);
+		IterableNode<T> newNode = new IterableNode<T>(element);
 
 		newNode.setNextNode(head);
 		head = newNode;
@@ -32,7 +32,7 @@ public class Stack<T> implements Iterable<T> {
 
 	public void printStack() {
 		String printStack = "";
-		Node<T> currentNode = head;
+		IterableNode<T> currentNode = head;
 		while (currentNode != null) {
 			printStack = printStack + " \n " + currentNode.getObject();
 			currentNode = currentNode.getNextNode();

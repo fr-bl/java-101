@@ -1,11 +1,11 @@
 import java.util.Iterator;
 
-public class Queue<T> implements Iterable<T> {
+public class IterableQueue<T> implements Iterable<T> {
 
-	Node<T> head;
-	Node<T> tail;
+	IterableNode<T> head;
+	IterableNode<T> tail;
 
-	public Queue() {
+	public IterableQueue() {
 		head = null;
 		tail = null;
 	}
@@ -19,7 +19,7 @@ public class Queue<T> implements Iterable<T> {
 	}
 
 	public void enqueue(T element) {
-		Node<T> newNode = new Node<T>(element);
+		IterableNode<T> newNode = new IterableNode<T>(element);
 
 		if (isEmpty()) {
 			head = newNode;
@@ -43,7 +43,7 @@ public class Queue<T> implements Iterable<T> {
 
 	public void printQueue() {
 		String printQueue = "";
-		Node<T> currentNode = head;
+		IterableNode<T> currentNode = head;
 		while (currentNode != null) {
 			printQueue = printQueue + " -> " + currentNode.getObject();
 			currentNode = currentNode.getNextNode();

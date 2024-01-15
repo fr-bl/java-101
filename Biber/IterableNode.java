@@ -1,19 +1,19 @@
 import java.util.Iterator;
 
-public class Node<T> implements Iterable<T> {
-    private Node<T> nextNode;
+public class IterableNode<T> implements Iterable<T> {
+    private IterableNode<T> nextNode;
     private T obj;
 
-    public Node(T pObj) {
+    public IterableNode(T pObj) {
         nextNode = null;
         obj = pObj;
     }
 
-    public Node<T> getNextNode() {
+    public IterableNode<T> getNextNode() {
         return nextNode;
     }
 
-    public void setNextNode(Node<T> pNextNode) {
+    public void setNextNode(IterableNode<T> pNextNode) {
         nextNode = pNextNode;
     }
 
@@ -27,9 +27,9 @@ public class Node<T> implements Iterable<T> {
 }
 
 class NodeIterator<T> implements Iterator<T> {
-    Node<T> node;
+    IterableNode<T> node;
 
-    NodeIterator(Node<T> node) {
+    NodeIterator(IterableNode<T> node) {
         // initialize cursor
         this.node = node;
     }
@@ -39,7 +39,7 @@ class NodeIterator<T> implements Iterator<T> {
     }
 
     public T next() {
-        Node<T> previous = node;
+        IterableNode<T> previous = node;
         node = node == null ? null : node.getNextNode();
         return previous.getObject();
     }

@@ -78,7 +78,7 @@ public class Queue<T> {
 	}
 
 	public static void main(String[] args) {
-		Queue<Person> persons = new Queue<Person>();
+		IterableQueue<Person> persons = new IterableQueue<Person>();
 		persons.enqueue(new Person("Elon Musk"));
 		persons.printQueue();
 
@@ -91,7 +91,7 @@ public class Queue<T> {
 		persons.dequeue();
 		persons.printQueue();
 
-		Queue<Hausaufgabe> aufgaben = new Queue<Hausaufgabe>();
+		IterableQueue<Hausaufgabe> aufgaben = new IterableQueue<Hausaufgabe>();
 		aufgaben.enqueue(new Hausaufgabe("Informatik", "programmieren"));
 		aufgaben.printQueue();
 

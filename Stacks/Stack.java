@@ -68,7 +68,7 @@ public class Stack<T> {
 	}
 
 	public static void main(String[] args){
-		Stack<Befehl> stack = new Stack<Befehl>();
+		IterableStack<Befehl> stack = new IterableStack<Befehl>();
 		stack.push(new Befehl("Grafik einfuegen"));
 		stack.printStack();
 
